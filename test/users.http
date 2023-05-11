@@ -1,0 +1,30 @@
+GET http://localhost:3000/users
+
+###
+GET http://localhost:3000/users/8
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json 
+
+ {
+  "nom":  "toto",   
+  "email": "toto@gmail.com" , 
+  "password": "20",
+  "role": "ADMIN"
+ }
+###
+PATCH  http://localhost:3000/users/8
+Content-Type: application/json 
+
+ {
+  
+  "nom":  "titi",   
+  "email": "toto@gmail.com" , 
+  "password": "200",
+  "role": "ADMIN"
+ }
+###
+DELETE http://localhost:3000/users/1
+
+

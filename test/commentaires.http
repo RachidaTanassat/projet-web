@@ -1,0 +1,26 @@
+GET http://localhost:3000/commentaires
+
+###
+GET http://localhost:3000/commentaires/1
+
+###
+POST http://localhost:3000/commentaires
+Content-Type: application/json 
+
+ {
+  "email" : "titi@email.com",  
+  "contenu": "bonjour"
+ }
+###
+PATCH  http://localhost:3000/commentaires/1
+Content-Type: application/json 
+
+ {
+  
+  "email" : "tito@email.com",  
+  "contenu": "bonjoooooooour"
+ }
+###
+DELETE http://localhost:3000/commentaires/1
+
+

@@ -1,0 +1,30 @@
+GET http://localhost:3000/articles
+
+###
+GET http://localhost:3000/articles/8
+
+###
+POST http://localhost:3000/articles
+Content-Type: application/json 
+
+ {
+  "titre": "publication",          
+  "contenu": "optionnel",            
+  "published": true,
+   "utilisateurId": 4
+ }
+###
+PATCH  http://localhost:3000/articles/3
+Content-Type: application/json 
+
+ {
+  
+  "titre": "ruotexff",          
+  "contenu": "optibttuuuuuuuuuuonnel",            
+  "published": false,
+  "utilisateurId": 4
+ }
+###
+DELETE http://localhost:3000/articles/1
+
+
