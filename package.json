@@ -10,11 +10,14 @@
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "lodash": "^4.17.21",
     "morgan": "~1.9.1",
     "node-fetch": "^2.6.11",
     "nodemon": "^2.0.22"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.0.0",
+    "faker": "^6.6.6",
     "prisma": "^4.14.0"
   },
   "main": "app.js",

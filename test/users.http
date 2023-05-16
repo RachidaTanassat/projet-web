@@ -8,9 +8,9 @@ POST http://localhost:3000/users
 Content-Type: application/json 
 
  {
-  "nom":  "toto",   
-  "email": "toto@gmail.com" , 
-  "password": "20",
+  "nom":  "tito",   
+  "email": "tito@gmail.com" , 
+  "password": "2",
   "role": "ADMIN"
  }
 ###
@@ -24,6 +24,7 @@ Content-Type: application/json
   "password": "200",
   "role": "ADMIN"
  }
+
 ###
 DELETE http://localhost:3000/users/1
 
