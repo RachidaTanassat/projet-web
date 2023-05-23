@@ -1,7 +1,10 @@
 GET http://localhost:3000/articles
 
 ###
-GET http://localhost:3000/articles/8
+GET http://localhost:3000/articles?skip=0&take=2 
+
+###
+GET http://localhost:3000/articles/user/895
 
 ###
 POST http://localhost:3000/articles
@@ -11,7 +14,7 @@ Content-Type: application/json
   "titre": "publication",          
   "contenu": "optionnel",            
   "published": true,
-   "utilisateurId": 4
+   "utilisateurId": 900
  }
 ###
 PATCH  http://localhost:3000/articles/3
@@ -25,6 +28,6 @@ Content-Type: application/json
   "utilisateurId": 4
  }
 ###
-DELETE http://localhost:3000/articles/1
+DELETE http://localhost:3000/articles/2477
 
 

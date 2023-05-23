@@ -1,0 +1,22 @@
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+   "nom":  "titi",   
+  "email": "titi@gmail.com" , 
+  "password": "2001",
+  "role": "ADMIN"
+
+}
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+   "nom":  "toto",   
+  "email": "toto@gmail.com" , 
+  "password": "0000",
+  "role": "AUTHOR"
+
+}

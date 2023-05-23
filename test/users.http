@@ -1,20 +1,20 @@
 GET http://localhost:3000/users
 
 ###
-GET http://localhost:3000/users/8
+GET http://localhost:3000/users/800
 
 ###
 POST http://localhost:3000/users
 Content-Type: application/json 
 
  {
-  "nom":  "tito",   
-  "email": "tito@gmail.com" , 
-  "password": "2",
-  "role": "ADMIN"
+   "nom":  "toto",   
+  "email": "totii@gmail.com" , 
+  "password": "0000",
+  "role": "AUTHOR"
  }
 ###
-PATCH  http://localhost:3000/users/8
+PATCH  http://localhost:3000/users/795
 Content-Type: application/json 
 
  {
@@ -26,6 +26,6 @@ Content-Type: application/json
  }
 
 ###
-DELETE http://localhost:3000/users/1
+DELETE http://localhost:3000/users/896
 
 

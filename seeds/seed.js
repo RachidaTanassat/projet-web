@@ -3,6 +3,8 @@ const _ = require('lodash');
 const {PrismaClient} = require('@prisma/client');
 const e = require('express');
 const prisma = new PrismaClient
+const { hashPassword } = require('../authentification/hashage.js')
+
 
 
 
@@ -10,29 +12,33 @@ const prisma = new PrismaClient
 async function createSeedData() {
   try {
     // create 10 users with role "AUTHOR"
+  
     const users = [];
     for (let i = 0; i < 10; i++) {
        const user = await prisma.Utilisateur.create({
         data: {
         nom: faker.person.fullName(),
         email: faker.internet.email(),
-        password: faker.internet.password(),
+        password: await hashPassword( faker.internet.password()),
         role: 'AUTHOR',
         }
       }).then();
       users.push(user);
  }
   // create 1 user with role "ADMIN"
-  prisma.Utilisateur.create({
-    data: {
+  
+const admin = await prisma.Utilisateur.create({
+     data: {
       nom: faker.person.fullName(),
       email: faker.internet.email(),
-      password: faker.internet.password(),
+      password: await hashPassword(faker.internet.password()),
       role: 'ADMIN',
-    },
-  }).then();
+    }
+  }).then(console.log);
+  
 
 
+  
    // create 10 categories
    const categories = [];
    for (let i = 0; i < 10; i++) {
@@ -64,7 +70,7 @@ async function createSeedData() {
         data:{
         titre: faker.lorem.sentence(),
         contenu: faker.lorem.paragraphs(),
-        image : faker.image.avatar(),
+        image : `${faker.image.city()}?random=${Date.now()}`,
         published: faker.datatype.boolean(),
         utilisateurId: users[Math.floor(Math.random() * users.length)].id,
         commentaires:{

@@ -1,5 +1,6 @@
 const {PrismaClient} = require('@prisma/client')
 const prisma = new PrismaClient
+const { hashPassword } = require('../authentification/hashage.js')
 
 
 function getAllUsers(){
@@ -10,14 +11,29 @@ function getUser(id){
     return prisma.utilisateur.findUnique({where: {id}})
 }
 
-function addUser(user){
-    return prisma.utilisateur.create({data: user})
+const addUser = async(user)=>{
+    
+	const hash = await hashPassword(user.password);
+	return prisma.utilisateur.create ({
+			data: {
+				nom: user.nom,
+				email: user.email,
+				password: hash,
+				role: user.role,
+			},
+		})
 }
 
-function updateUser(id, user){
+const  updateUser = async(id, user)=>{
+    const hash = await hashPassword(user.password);
     return prisma.utilisateur.update({
         where: {id},
-        data: user
+        data: {
+            nom: user.nom,
+            email: user.email,
+            password: hash,
+            role: user.role,
+        },
     })
 }
 function delUser(id){

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENSET-M</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav navbar navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="nav_logo" data-link>Blog_Rachida</a>
+
+        <ul class="navbar-nav mr-auto">
+          <li class="nav_item ">
+            <!-- <a href="/" class="nav_link" data-link>Home</a>
+            <a href="/articles" class="nav_link" data-link>Articles</a> -->
+          </li>
+        </ul> 
+        <!-- <form class="form-inline my-2 my-lg-0"> -->
+        <button class="button" id="form-open">Login</button>
+        <!-- </form> -->
+           <!-- Button trigger modal -->
+
+
+      </nav>
+    </header>
+ 
+    <div id="app"></div>
+
+
+    <!-- Home -->
+    <section class="home">
+      <div class="form_container">
+          <i class="uil uil-times form_close"></i>
+         
+       <!-- Login From -->
+       <div class="form login_form">
+         <form >
+           <h2>Login</h2>
+
+           <div class="input_box">
+             <input type="email" placeholder="Enter your email" id="username" required />
+             <i class="uil uil-envelope-alt email"></i>
+           </div>
+           <div class="input_box">
+             <input type="password"  id="password" placeholder="Enter your password" required />
+             <i class="uil uil-lock password"></i>
+             <i class="uil uil-eye-slash pw_hide"></i>
+           </div>
+
+           <div class="option_field">
+             <span class="checkbox">
+               <input type="checkbox" id="check" />
+               <label for="check">Remember me</label>
+             </span>
+             <a href="#" class="forgot_pw">Forgot password?</a>
+           </div>
+
+           <button class="button" id="login" data-link>Login Now</button>
+
+           <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+         </form>
+       </div>
+       <div class="alert alert-danger" id="mssg" role="alert" hidden>
+        Ooops check your  Credentials !!!!
+
+      </div>
+
+       <!-- Signup From -->
+       <div class="form signup_form">
+         <form action="#">
+           <h2>Signup</h2>
+
+           <div class="input_box">
+             <input type="email" placeholder="Enter your email" required />
+             <i class="uil uil-envelope-alt email"></i>
+           </div>
+           <div class="input_box">
+             <input type="password" placeholder="Create password" required />
+             <i class="uil uil-lock password"></i>
+             <i class="uil uil-eye-slash pw_hide"></i>
+           </div>
+           <div class="input_box">
+             <input type="password" placeholder="Confirm password" required />
+             <i class="uil uil-lock password"></i>
+             <i class="uil uil-eye-slash pw_hide"></i>
+           </div>
+
+           <button class="button">Signup Now</button>
+
+           <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+         </form>
+       </div>
+     </div>
+   </section>
+
+
+
+
+
+
+
+
+
+
+   
+
+
+   
+  <script type="module" src="./javascripts/index.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+  <script src="./index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+ 
+  </body>
+</html>

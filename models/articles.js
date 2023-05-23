@@ -2,17 +2,31 @@ const {PrismaClient} = require('@prisma/client')
 const prisma = new PrismaClient
 
 
-function getAllarticles(){
-    return prisma.Article.findMany()
-}
+function getAllarticles(take, skip){
+    return prisma.Article.findMany({
+        skip: skip,
+        take: take,
+        where: {
+            published: true,
+        },
+    },
+)}
 
 function getarticle(id){
     return prisma.Article.findUnique({where: {id}})
 }
 
+function getarticle_user(id_user){
+    return prisma.Article.findMany({where: {
+        utilisateurId: id_user,
+    },
+})
+}
+
 function addarticle(article){
     return prisma.Article.create({data: article})
 }
+
 
 function updatearticle(id, article){
     return prisma.Article.update({
@@ -29,5 +43,6 @@ module.exports = {
         getarticle,
         addarticle,
         delarticle,
-        updatearticle
+        updatearticle,
+        getarticle_user
 }

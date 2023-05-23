@@ -12,7 +12,15 @@ router.get('/:id', function(req, res, next) {
   getUser(+req.params.id).then(user => res.json(user))
 });
 router.post('/', function(req, res, next) {
-  addUser(req.body).then(user => res.json(user))
+  
+    addUser(req.body)
+    .then((user) => {
+			res.status(200).json(user)
+		})
+		.catch((err) => {
+			res.status(500).json(err)
+      console.log('email already exist!!')
+		})
 });
 
 router.patch('/:id', function(req, res, next) {
@@ -22,6 +30,8 @@ router.patch('/:id', function(req, res, next) {
 router.delete('/:id', function(req, res, next) {
   delUser(+req.params.id).then(user => res.json(user))
 });
+
+
 
 
 
