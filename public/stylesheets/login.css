@@ -203,27 +203,19 @@ a {
   margin-top: 15px;
 }
 #h1{
-  color: #fff;
+  color: rgb(8, 7, 7);
   text-align: center;
-  padding: 70px 0;
   margin-top: 200px;
   position: absolute;
-  margin-left: 40%;
+  margin-left: 30%;
 }
 #h1 a{
-  color: #fff;
+  color: rgb(26, 24, 24);
 }
  
 
 
 
-.wrapper{
-  width: 80%; 
-  margin: 0 auto;
-}
-.page-header h2{
-  margin-top: 0;
-}
-table tr td:last-child a{
-  margin-right: 15px;
-}
+
+
+

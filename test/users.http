@@ -14,7 +14,7 @@ Content-Type: application/json
   "role": "AUTHOR"
  }
 ###
-PATCH  http://localhost:3000/users/795
+PATCH  http://localhost:3000/users/885
 Content-Type: application/json 
 
  {

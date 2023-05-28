@@ -48,7 +48,7 @@ model Categorie {
 
 model Commentaire {
   id                    Int                     @id @default(autoincrement())
-  email                 String                  @unique
+  email                 String                  
   contenu               String
   Article               Article?                @relation(fields: [articleId], references: [id])
   articleId             Int?

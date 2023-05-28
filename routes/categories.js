@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {getAllcategories, getcategorie, addcategorie, updatecategorie, delcategorie} = require('../models/categories.js')
+const {getAllcategories, getcategorie, addcategorie, updatecategorie, delcategorie, Articles_category} = require('../models/categories.js');
 
 
 /* GET categories listing. */
@@ -21,6 +21,11 @@ router.patch('/:id', function(req, res, next) {
 
 router.delete('/:id', function(req, res, next) {
   delcategorie(+req.params.id).then(categorie => res.json(categorie))
+});
+
+
+router.get('/article/:id',function(req, res, next){
+  Articles_category(+req.params.id).then(articles  => res.json(articles))
 });
 
 

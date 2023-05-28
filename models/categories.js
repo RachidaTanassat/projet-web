@@ -24,10 +24,27 @@ function delcategorie(id){
     return prisma.Categorie.delete({where: {id}})
 }
  
+
+function Articles_category(id){
+
+return prisma.Categorie.findUnique({
+  where: {
+    id: id,
+  },
+  include: {
+    articles: true,
+  },
+})
+}
+
+
+
+
 module.exports = {
         getAllcategories,
         getcategorie,
         addcategorie,
         delcategorie,
-        updatecategorie
+        updatecategorie,
+        Articles_category
 }

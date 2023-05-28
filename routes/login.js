@@ -4,7 +4,6 @@ const {PrismaClient} = require('@prisma/client')
 const prisma = new PrismaClient
 const bcrypt = require('bcryptjs');
 
-
 router.post("/",  async (req, res) => {
 
     const body = req.body;
@@ -28,9 +27,6 @@ router.post("/",  async (req, res) => {
     } else {
       res.status(401).json({ error: "User does not exist" });
      }
-  
-    
-  
   });
   
 

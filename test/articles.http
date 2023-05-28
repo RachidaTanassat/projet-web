@@ -28,6 +28,6 @@ Content-Type: application/json
   "utilisateurId": 4
  }
 ###
-DELETE http://localhost:3000/articles/2477
+DELETE http://localhost:3000/articles/2482
 
 

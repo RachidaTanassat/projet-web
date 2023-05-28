@@ -37,6 +37,17 @@ function updatearticle(id, article){
 function delarticle(id){
     return prisma.Article.delete({where: {id}})
 }
+
+function getComment(id){
+    return prisma.Article.findUnique({
+        where: {
+          id: id,
+        },
+        include: {
+            commentaires: true,
+        },
+      })
+}
  
 module.exports = {
         getAllarticles,
@@ -44,5 +55,6 @@ module.exports = {
         addarticle,
         delarticle,
         updatearticle,
-        getarticle_user
+        getarticle_user,
+        getComment
 }

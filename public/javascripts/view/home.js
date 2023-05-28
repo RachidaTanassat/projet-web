@@ -8,14 +8,7 @@ export default class extends AbstractView {
     }
 
     async getHtml() {
-        return `
-        <div id="h1">
-          <h1> Welcome to my Blog </h1>
-          <p>
-            <a href="/articles" data-link>View recent articles</a>
-          </p>
-        </div>
-        
-      `;
+        $('#h1').show();
+        return ` `;
     }
 }

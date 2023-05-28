@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {getAllarticles, getarticle, addarticle, updatearticle, delarticle, getarticle_user } = require('../models/articles.js')
+const {getAllarticles, getarticle, addarticle, updatearticle, delarticle, getarticle_user, getComment } = require('../models/articles.js')
 
 
 /* GET articles listing. */
@@ -17,6 +17,11 @@ router.get('/:id', function(req, res, next) {
 router.get('/user/:id_user', function(req, res, next) {
   getarticle_user(+req.params.id_user).then(article => res.json(article))
 });
+
+router.get('/commentaires/:id', function(req, res, next) {
+  getComment(+req.params.id).then(article => res.json(article))
+});
+
 
 router.get('/:id', function(req, res, next) {
   getarticle(+req.params.id).then(article => res.json(article))
