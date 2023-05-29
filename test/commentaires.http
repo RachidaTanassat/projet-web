@@ -21,6 +21,6 @@ Content-Type: application/json
   "contenu": "bonjoooooooour"
  }
 ###
-DELETE http://localhost:3000/commentaires/1
+DELETE http://localhost:3000/commentaires/22724
 
 
